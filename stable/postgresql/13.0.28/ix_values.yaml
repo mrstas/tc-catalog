@@ -4,11 +4,11 @@ image:
   tag: 14.7.0@sha256:9a9097005c47417ba785fdc0e4ced26937106234abfce83da36ce6accdceca60
 workload:
   main:
-    enabled: true
+    enabled: false
     podSpec:
       containers:
         main:
-          enabled: true
+          enabled: false
           probes:
             liveness:
               enabled: false
