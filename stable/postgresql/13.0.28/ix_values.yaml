@@ -53,6 +53,6 @@ cnpg:
       instances: 2
     # -- set to enable prometheus metrics
     monitoring:
-      enablePodMonitor: true
+      enablePodMonitor: false
     # -- contains credentials and urls output by generator
     creds: {}
