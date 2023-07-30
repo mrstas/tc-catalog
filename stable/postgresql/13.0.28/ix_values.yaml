@@ -4,7 +4,7 @@ image:
   tag: 14.7.0@sha256:9a9097005c47417ba785fdc0e4ced26937106234abfce83da36ce6accdceca60
 workload:
   main:
-    enabled: true
+    enabled: false
     podSpec:
       containers:
         main:
@@ -28,7 +28,7 @@ service:
         port: 9999
 cnpg:
   main:
-    enabled: false
+    enabled: true
     primary: true
     # -- number of instances for both postgres and pgbouncer
     instances: 2
