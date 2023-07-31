@@ -105,4 +105,4 @@ questions:
                       label: "enablePodMonitor"
                       schema:
                         type: boolean
-                        default: true
+                        default: false
