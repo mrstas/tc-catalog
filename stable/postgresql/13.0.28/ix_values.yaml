@@ -4,18 +4,18 @@ image:
   tag: 14.7.0@sha256:9a9097005c47417ba785fdc0e4ced26937106234abfce83da36ce6accdceca60
 workload:
   main:
-    enabled: true
+    enabled: false
     podSpec:
       containers:
         main:
-          enabled: true
+          enabled: false
           probes:
             liveness:
-              enabled: true
+              enabled: false
             readiness:
-              enabled: true
+              enabled: false
             startup:
-              enabled: true
+              enabled: false
 portal:
   open:
     enabled: true
@@ -23,14 +23,14 @@ service:
   main:
     ports:
       main:
-        port: 5432
+        port: 10099
         targetPort: 5432
 cnpg:
   main:
     enabled: true
     primary: true
     # -- number of instances for both postgres and pgbouncer
-    instances: 2
+    instances: 1
     database: "app"
     user: "app"
     # password:
@@ -49,7 +49,7 @@ cnpg:
       size: "256Gi"
       walsize: "256Gi"
     pooler:
-      instances: 2
+      instances: 1
     # -- set to enable prometheus metrics
     monitoring:
       enablePodMonitor: false
