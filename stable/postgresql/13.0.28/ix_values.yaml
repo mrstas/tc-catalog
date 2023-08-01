@@ -21,11 +21,11 @@ portal:
     enabled: false
 service:
   main:
-    enabled: true
+    enabled: false
     type: "LoadBalancer"
     ports:
       main:
-        enabled: true
+        enabled: false
         port: 10099
         targetPort: 5432
 cnpg:
